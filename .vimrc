@@ -22,6 +22,7 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'Townk/vim-autoclose'
 Plugin 'alvan/vim-closetag'
 Plugin 'edsono/vim-matchit'
+Plugin 'tpope/vim-sleuth'
 
 call vundle#end()
 

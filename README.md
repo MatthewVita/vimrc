@@ -1,5 +1,5 @@
 # vimrc
-My vimrc.
+My vimrc (I use GVim)
 
 ## Setup
 

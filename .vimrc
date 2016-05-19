@@ -18,11 +18,12 @@ Plugin 'scrooloose/syntastic'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'spf13/PIV'
 Plugin 'zefei/vim-wintabs'
-Plugin 'Shougo/neocomplete.vim'
 Plugin 'Townk/vim-autoclose'
 Plugin 'alvan/vim-closetag'
 Plugin 'edsono/vim-matchit'
 Plugin 'tpope/vim-sleuth'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'dansomething/vim-eclim'
 
 call vundle#end()
 
@@ -77,6 +78,22 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Inserts empty line with enter key
 nmap <S-ENTER> O<Esc>
 nmap <CR> o<Esc>
+
+" Neocomplete
+let g:neocomplete#data_directory = '~/.vim/tmp/neocomplete'
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_auto_select = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#auto_completion_start_length = 2
+let g:neocomplete#enable_auto_delimiter = 1
+let g:neocomplete#sources#tags#cache_limit_size = 16777216
+inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
+let g:neocomplete#force_overwrite_completefunc=1
+
+" Eclim
+let g:EclimCompletionMethod = 'omnifunc'
+EclimEnable
+set completeopt-=preview
 
 " Removes swap files
 set nobackup

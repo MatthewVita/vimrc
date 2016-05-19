@@ -14,14 +14,18 @@ Plugin 'tpope/vim-commentary'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'pangloss/vim-javascript'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'spf13/PIV'
 Plugin 'zefei/vim-wintabs'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'Townk/vim-autoclose'
+Plugin 'alvan/vim-closetag'
+Plugin 'edsono/vim-matchit'
 
 call vundle#end()
-filetype plugin indent on
+
+filetype plugin on
 
 " Basic editor settings
 set ruler
@@ -30,8 +34,8 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set laststatus=2
-set nowrap
 set number
+set nowrap
 set guioptions -=T
 
 " Allow the mouse to function as expected

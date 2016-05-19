@@ -30,6 +30,7 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set laststatus=2
+set nowrap
 set number
 set guioptions -=T
 

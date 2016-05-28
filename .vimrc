@@ -1,11 +1,9 @@
-" viM mode
 set nocompatible
 
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
@@ -40,12 +38,24 @@ set number
 set nowrap
 set guioptions -=T
 
+" <ESC> action with timeoutlen delay
+" https://gist.github.com/brendonrapp/5944296
+augroup FastEscape
+  autocmd!
+  au InsertEnter * set timeoutlen=0
+  au InsertLeave * set timeoutlen=1000
+augroup END
+
+" Enable spellchecker
+setlocal spell spelllang=en_us
+
 " Allow the mouse to function as expected
 set mouse=a
 
 " Sets tab navigation
 map <C-H> <Plug>(wintabs_previous)
 map <C-L> <Plug>(wintabs_next)
+map <C-W> <Plug>(wintabs_close)
 
 " Automatically enable syntax for files
 syntax on
@@ -92,7 +102,6 @@ let g:neocomplete#force_overwrite_completefunc=1
 
 " Eclim
 let g:EclimCompletionMethod = 'omnifunc'
-EclimEnable
 set completeopt-=preview
 
 " Removes swap files

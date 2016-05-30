@@ -55,7 +55,7 @@ set mouse=a
 " Sets tab navigation
 map <C-H> <Plug>(wintabs_previous)
 map <C-L> <Plug>(wintabs_next)
-map <C-W> <Plug>(wintabs_close)
+map <C-F4> <Plug>(wintabs_close)
 
 " Automatically enable syntax for files
 syntax on

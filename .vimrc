@@ -109,3 +109,8 @@ set completeopt-=preview
 set nobackup
 set nowritebackup
 set noswapfile
+
+" ctrl-s save
+nnoremap <c-s> :w<CR>
+inoremap <c-s> <Esc>:w<CR>
+vnoremap <c-s> <Esc>:w<CR>
